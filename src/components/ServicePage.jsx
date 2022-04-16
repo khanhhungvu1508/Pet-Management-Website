@@ -4,9 +4,14 @@ import ScheduleVisit from "./ScheduleVisit";
 export default class ServicePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { seeInfo: 1 };
   }
   serciveName = ["Dog per visit", "Cat per visit", "Pet bath", "Pet groom"];
+  classNameForService = [
+    "service-tab-link w-inline-block",
+    "service-tab-link w-inline-block",
+    "service-tab-link w-inline-block",
+  ];
   render() {
     return (
       <div className="container-default w-container">
@@ -84,240 +89,273 @@ export default class ServicePage extends React.Component {
                     >
                       <a
                         data-w-tab="About"
-                        className="service-tab-link w-inline-block w-tab-link w--current"
+                        className={this.classNameForService[0]}
                         id="w-tabs-0-data-w-tab-0"
-                        href="#w-tabs-0-data-w-pane-0"
+                        // href=""
                         role="tab"
                         aria-controls="w-tabs-0-data-w-pane-0"
                         aria-selected="true"
+                        onClick={() => {
+                          this.classNameForService[0] =
+                            "service-tab-link w-inline-block w-tab-link w--current";
+                          this.classNameForService[1] =
+                            "service-tab-link w-inline-block";
+                          this.classNameForService[2] =
+                            "service-tab-link w-inline-block";
+                          this.setState({ seeInfo: 1 });
+                        }}
                       >
                         <div>About</div>
                       </a>
                       <a
                         data-w-tab="What's included?"
-                        className="service-tab-link w-inline-block w-tab-link"
+                        className={this.classNameForService[1]}
                         id="w-tabs-0-data-w-tab-1"
-                        href="#w-tabs-0-data-w-pane-1"
+                        // href="#w-tabs-0-data-w-pane-1"
                         role="tab"
                         aria-controls="w-tabs-0-data-w-pane-1"
                         aria-selected="false"
                         tabindex="-1"
+                        onClick={() => {
+                          this.classNameForService[1] =
+                            "service-tab-link w-inline-block w-tab-link w--current";
+                          this.classNameForService[0] =
+                            "service-tab-link w-inline-block";
+                          this.classNameForService[2] =
+                            "service-tab-link w-inline-block";
+                          this.setState({ seeInfo: 2 });
+                        }}
                       >
                         <div>What's included?</div>
                       </a>
                       <a
                         data-w-tab="FAQs"
-                        className="service-tab-link w-inline-block w-tab-link"
+                        className={this.classNameForService[2]}
                         id="w-tabs-0-data-w-tab-2"
-                        href="#w-tabs-0-data-w-pane-2"
+                        // href="#w-tabs-0-data-w-pane-2"
                         role="tab"
                         aria-controls="w-tabs-0-data-w-pane-2"
                         aria-selected="false"
                         tabindex="-1"
+                        onClick={() => {
+                          this.classNameForService[2] =
+                            "service-tab-link w-inline-block w-tab-link w--current";
+                          this.classNameForService[1] =
+                            "service-tab-link w-inline-block";
+                          this.classNameForService[0] =
+                            "service-tab-link w-inline-block";
+                          this.setState({ seeInfo: 3 });
+                        }}
                       >
                         <div>FAQs</div>
                       </a>
                     </div>
                     <div className="service-tabs-content w-tab-content">
-                      <div
-                        data-w-tab="About"
-                        className="service-tab-pane w-tab-pane w--tab-active"
-                        id="w-tabs-0-data-w-pane-0"
-                      >
-                        <div className="rich-text w-richtext">
-                          <h2>About the service</h2>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Semper nulla elementum, lobortis feugiat cras
-                            rhoncus, sem est molestie. Quam nisi, purus
-                            adipiscing dictumst fringilla. Lorem iaculis
-                            imperdiet nisi auctor.{" "}
-                            <strong>Sagittis quis</strong> curabitur morbi
-                            tincidunt. Scelerisque nisi, odio. Bibendum
-                            fringilla interdum placerat elit consectetur arcu.
-                            Auctor nisi.
-                          </p>
-                          <ul>
-                            <li>
-                              Pretium nibh ipsum consequat nisl vel pretium. Sed
-                              vulputate mi sit
-                            </li>
-                            <li>
-                              Tristique nulla aliquet enim tortor at auctor
-                              urna. Sit amet aliquam id diam maer &nbsp;dolore
-                              eu fugiat nulla pariatur
-                            </li>
-                            <li>
-                              Nam libero justo laoreet sit amet. Lacus sed
-                              viverra tellus in hac
-                            </li>
-                            <li>
-                              Tempus imperdiet nulla malesuada pellentesque elit
-                              eget gravida cum
-                            </li>
-                          </ul>
-                          <figure className="w-richtext-align-fullwidth w-richtext-figure-type-image">
-                            <div>
-                              <img
-                                src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af1e48deb424e6a3aa768_image-figure-services-veterinary-x-template.jpg"
-                                loading="lazy"
-                                alt=""
-                              />
-                            </div>
-                          </figure>
-                        </div>
-                      </div>
-                      <div
-                        data-w-tab="What's included?"
-                        className="service-tab-pane w-tab-pane"
-                        id="w-tabs-0-data-w-pane-1"
-                        role="tabpanel"
-                        aria-labelledby="w-tabs-0-data-w-tab-1"
-                        // style=""
-                      >
-                        <div className="rich-text w-richtext">
-                          <h2>What's included?</h2>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Semper nulla elementum, lobortis feugiat cras
-                            rhoncus, sem est molestie. Quam nisi, purus
-                            adipiscing dictumst fringilla. Lorem iaculis
-                            imperdiet nisi auctor.{" "}
-                            <strong>Sagittis quis</strong> curabitur morbi
-                            tincidunt. Scelerisque nisi, odio. Bibendum
-                            fringilla interdum placerat elit consectetur arcu.
-                            Auctor nisi.
-                          </p>
-                          <ul>
-                            <li>
-                              Pretium nibh ipsum consequat nisl vel pretium. Sed
-                              vulputate mi sit
-                            </li>
-                            <li>
-                              Tristique nulla aliquet enim tortor at auctor
-                              urna. Sit amet aliquam id diam maer &nbsp;dolore
-                              eu fugiat nulla pariatur
-                            </li>
-                            <li>
-                              Nam libero justo laoreet sit amet. Lacus sed
-                              viverra tellus in hac
-                            </li>
-                            <li>
-                              Tempus imperdiet nulla malesuada pellentesque elit
-                              eget gravida cum
-                            </li>
-                          </ul>
-                          <figure
-                            // style="max-width:1512px"
-                            className="w-richtext-align-fullwidth w-richtext-figure-type-image"
-                          >
-                            <div>
-                              <img
-                                src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af1e48deb424e6a3aa768_image-figure-services-veterinary-x-template.jpg"
-                                loading="lazy"
-                                alt=""
-                              />
-                            </div>
-                          </figure>
-                        </div>
-                      </div>
-                      <div
-                        data-w-tab="FAQs"
-                        className="service-tab-pane w-tab-pane"
-                        id="w-tabs-0-data-w-pane-2"
-                        role="tabpanel"
-                        aria-labelledby="w-tabs-0-data-w-tab-2"
-                        // style=""
-                      >
-                        <div className="service-faq-wrapper">
-                          <div className="service-faq-content-top">
-                            <h2 className="title h5-size service-faq">
-                              How can I make a reservation?
-                            </h2>
-                            <div className="service-faq-icon-wrapper">
-                              <div className="service-faq-icon-1"></div>
-                              <div className="service-faq-icon-2"></div>
-                            </div>
-                          </div>
-                          <div
-                            className="service-faq-content-bottom"
-                            // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
-                          >
-                            <div className="space service-faq"></div>
-                            <p className="paragraph service-faq">
+                      {this.state.seeInfo == 1 && (
+                        <div
+                          data-w-tab="About"
+                          className="service-tab-pane w-tab-pane w--tab-active"
+                          id="w-tabs-0-data-w-pane-0"
+                        >
+                          <div className="rich-text w-richtext">
+                            <h2>About the service</h2>
+                            <p>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua.
+                              elit. Semper nulla elementum, lobortis feugiat
+                              cras rhoncus, sem est molestie. Quam nisi, purus
+                              adipiscing dictumst fringilla. Lorem iaculis
+                              imperdiet nisi auctor.{" "}
+                              <strong>Sagittis quis</strong> curabitur morbi
+                              tincidunt. Scelerisque nisi, odio. Bibendum
+                              fringilla interdum placerat elit consectetur arcu.
+                              Auctor nisi.
                             </p>
+                            <ul>
+                              <li>
+                                Pretium nibh ipsum consequat nisl vel pretium.
+                                Sed vulputate mi sit
+                              </li>
+                              <li>
+                                Tristique nulla aliquet enim tortor at auctor
+                                urna. Sit amet aliquam id diam maer &nbsp;dolore
+                                eu fugiat nulla pariatur
+                              </li>
+                              <li>
+                                Nam libero justo laoreet sit amet. Lacus sed
+                                viverra tellus in hac
+                              </li>
+                              <li>
+                                Tempus imperdiet nulla malesuada pellentesque
+                                elit eget gravida cum
+                              </li>
+                            </ul>
+                            <figure className="w-richtext-align-fullwidth w-richtext-figure-type-image">
+                              <div>
+                                <img
+                                  src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af1e48deb424e6a3aa768_image-figure-services-veterinary-x-template.jpg"
+                                  loading="lazy"
+                                  alt=""
+                                />
+                              </div>
+                            </figure>
                           </div>
                         </div>
-                        <div className="service-faq-wrapper">
-                          <div className="service-faq-content-top">
-                            <h2 className="title h5-size service-faq">
-                              What services do you offer?
-                            </h2>
-                            <div className="service-faq-icon-wrapper">
-                              <div className="service-faq-icon-1"></div>
-                              <div className="service-faq-icon-2"></div>
+                      )}
+                      {this.state.seeInfo == 2 && (
+                        <div
+                          data-w-tab="What's included?"
+                          className="service-tab-pane w-tab-pane"
+                          id="w-tabs-0-data-w-pane-1"
+                          role="tabpanel"
+                          aria-labelledby="w-tabs-0-data-w-tab-1"
+                          // style=""
+                        >
+                          <div className="rich-text w-richtext">
+                            <h2>What's included?</h2>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit. Semper nulla elementum, lobortis feugiat
+                              cras rhoncus, sem est molestie. Quam nisi, purus
+                              adipiscing dictumst fringilla. Lorem iaculis
+                              imperdiet nisi auctor.{" "}
+                              <strong>Sagittis quis</strong> curabitur morbi
+                              tincidunt. Scelerisque nisi, odio. Bibendum
+                              fringilla interdum placerat elit consectetur arcu.
+                              Auctor nisi.
+                            </p>
+                            <ul>
+                              <li>
+                                Pretium nibh ipsum consequat nisl vel pretium.
+                                Sed vulputate mi sit
+                              </li>
+                              <li>
+                                Tristique nulla aliquet enim tortor at auctor
+                                urna. Sit amet aliquam id diam maer &nbsp;dolore
+                                eu fugiat nulla pariatur
+                              </li>
+                              <li>
+                                Nam libero justo laoreet sit amet. Lacus sed
+                                viverra tellus in hac
+                              </li>
+                              <li>
+                                Tempus imperdiet nulla malesuada pellentesque
+                                elit eget gravida cum
+                              </li>
+                            </ul>
+                            <figure
+                              // style="max-width:1512px"
+                              className="w-richtext-align-fullwidth w-richtext-figure-type-image"
+                            >
+                              <div>
+                                <img
+                                  src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af1e48deb424e6a3aa768_image-figure-services-veterinary-x-template.jpg"
+                                  loading="lazy"
+                                  alt=""
+                                />
+                              </div>
+                            </figure>
+                          </div>
+                        </div>
+                      )}
+                      {this.state.seeInfo == 3 && (
+                        <div
+                          data-w-tab="FAQs"
+                          className="service-tab-pane w-tab-pane"
+                          id="w-tabs-0-data-w-pane-2"
+                          role="tabpanel"
+                          aria-labelledby="w-tabs-0-data-w-tab-2"
+                          // style=""
+                        >
+                          <div className="service-faq-wrapper">
+                            <div className="service-faq-content-top">
+                              <h2 className="title h5-size service-faq">
+                                How can I make a reservation?
+                              </h2>
+                              <div className="service-faq-icon-wrapper">
+                                <div className="service-faq-icon-1"></div>
+                                <div className="service-faq-icon-2"></div>
+                              </div>
+                            </div>
+                            <div
+                              className="service-faq-content-bottom"
+                              // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
+                            >
+                              <div className="space service-faq"></div>
+                              <p className="paragraph service-faq">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                              </p>
                             </div>
                           </div>
-                          <div
-                            className="service-faq-content-bottom"
-                            // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
-                          >
-                            <div className="space service-faq"></div>
-                            <p className="paragraph service-faq">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="service-faq-wrapper">
-                          <div className="service-faq-content-top">
-                            <h2 className="title h5-size service-faq">
-                              Do you offer urgent appointments?{" "}
-                            </h2>
-                            <div className="service-faq-icon-wrapper">
-                              <div className="service-faq-icon-1"></div>
-                              <div className="service-faq-icon-2"></div>
+                          <div className="service-faq-wrapper">
+                            <div className="service-faq-content-top">
+                              <h2 className="title h5-size service-faq">
+                                What services do you offer?
+                              </h2>
+                              <div className="service-faq-icon-wrapper">
+                                <div className="service-faq-icon-1"></div>
+                                <div className="service-faq-icon-2"></div>
+                              </div>
+                            </div>
+                            <div
+                              className="service-faq-content-bottom"
+                              // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
+                            >
+                              <div className="space service-faq"></div>
+                              <p className="paragraph service-faq">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                              </p>
                             </div>
                           </div>
-                          <div
-                            className="service-faq-content-bottom"
-                            // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
-                          >
-                            <div className="space service-faq"></div>
-                            <p className="paragraph service-faq">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="service-faq-wrapper last">
-                          <div className="service-faq-content-top">
-                            <h2 className="title h5-size service-faq">
-                              What is your staff experience?
-                            </h2>
-                            <div className="service-faq-icon-wrapper">
-                              <div className="service-faq-icon-1"></div>
-                              <div className="service-faq-icon-2"></div>
+                          <div className="service-faq-wrapper">
+                            <div className="service-faq-content-top">
+                              <h2 className="title h5-size service-faq">
+                                Do you offer urgent appointments?{" "}
+                              </h2>
+                              <div className="service-faq-icon-wrapper">
+                                <div className="service-faq-icon-1"></div>
+                                <div className="service-faq-icon-2"></div>
+                              </div>
+                            </div>
+                            <div
+                              className="service-faq-content-bottom"
+                              // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
+                            >
+                              <div className="space service-faq"></div>
+                              <p className="paragraph service-faq">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                              </p>
                             </div>
                           </div>
-                          <div
-                            className="service-faq-content-bottom"
-                            // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
-                          >
-                            <div className="space service-faq"></div>
-                            <p className="paragraph service-faq">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua.
-                            </p>
+                          <div className="service-faq-wrapper last">
+                            <div className="service-faq-content-top">
+                              <h2 className="title h5-size service-faq">
+                                What is your staff experience?
+                              </h2>
+                              <div className="service-faq-icon-wrapper">
+                                <div className="service-faq-icon-1"></div>
+                                <div className="service-faq-icon-2"></div>
+                              </div>
+                            </div>
+                            <div
+                              className="service-faq-content-bottom"
+                              // style="height: 0px; opacity: 0; transform: translate3d(0px, 100%, 0px) scale3d(0.9, 0.9, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: none;"
+                            >
+                              <div className="space service-faq"></div>
+                              <p className="paragraph service-faq">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                              </p>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -96,7 +96,7 @@ class ScheduleVisit extends Component {
                     className="button-primary full-width w-button"
                   />
                 </form>
-                <div
+                {/* <div
                   className="success-message w-form-done"
                   tabindex="-1"
                   role="region"
@@ -106,33 +106,34 @@ class ScheduleVisit extends Component {
                     Your schedule has been submitted. <br />
                     We will get back to you within 24-48 hours.
                   </div>
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   className="error-message w-form-fail"
                   tabindex="-1"
                   role="region"
                   aria-label="Service Form failure"
                 >
                   <div>Oops! Something went wrong.</div>
-                </div>
+                </div> */}
               </div>
             </div>
             <img
               src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611d2f6790774775921ed7a2_shape-1-service-veterinary-x-template.svg"
               loading="eager"
+              id="image_yellow"
               // style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(186.919deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d; will-change: transform;"
               data-w-id="6540ad39-91b5-655c-396a-4913641230b6"
               alt=""
               className="image shape card-service-form-shape-1"
             />
-            <img
+            {/* <img
               src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611d2f675ebb4454abc440fc_shape-2-service-veterinary-x-template.svg"
               loading="eager"
               // style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(266.832deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d; will-change: transform;"
               data-w-id="29dbe95d-7f0b-8a3e-4380-540c50efafbc"
               alt=""
               className="image shape card-service-form-shape-2"
-            />
+            /> */}
           </div>
         </div>
       </div>
