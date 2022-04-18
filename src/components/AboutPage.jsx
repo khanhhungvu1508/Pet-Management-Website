@@ -277,62 +277,7 @@ export default class AboutPage extends React.Component {
                                 </div>
                             </div>
                         </div>
-<div id="list-follow-in-instagram">
-                    <div id="list-follow-in-instagram-wrapper">
-                        <div id="list-follow-in-instagram-title">
-                            Follow us on&#160;
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        </div>
 
-                        <div id="grid-list-follow-in-instagram-image">
-                            {
-                                listImageInInstagram.map((listImage, index) => 
-                                    <a 
-                                        href="https://www.instagram.com/" 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        id={listImage.id}
-                                        key={listImage.key}
-                                        onMouseEnter={() => this.onMouseEnterListFollowInstagram(index)}
-                                        onMouseLeave={() => this.onMouseLeaveListFollowInstagram(index)}
-                                        style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1)
-                                                        + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1) 
-                                                        + ", 1) rotateZ(" + this.state.rotateZImageInListFollowInstagrams[index].toString() + "deg)"}}
-                                    >
-                                        <img
-                                            src={listImage.src}
-                                            alt=""
-                                            style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1)
-                                                    + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1) 
-                                                    + ", 1)"}}
-                                        />
-                                    </a>
-                                )
-                            }
-                        </div>
-
-                        <img
-                            src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611b02494ed1f62ec189c397_shape-1-instagram-veterinary-x-template.svg"
-                            alt=""
-                            id="list-follow-in-instagram-image-bg1"
-                            style={{transform: "rotateZ(" + this.props.rotateZImage.toString() + "deg)"}}
-                        />
-
-                        <img
-                            src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611b024a482dee6b2e1e340e_shape-2-instagram-veterinary-x-template.svg"
-                            alt=""
-                            id="list-follow-in-instagram-image-bg2"
-                            style={{transform: "rotateZ(" + this.props.rotateZImage.toString() + "deg)"}}
-                        />
-
-                        <img
-                            src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611b01a7c02126789ccbb2b6_shape-2-testimonials-veterinary-x-template.svg"
-                            alt=""
-                            id="list-follow-in-instagram-image-bg3"
-                            style={{transform: "rotateZ(" + this.props.rotateZImage.toString() + "deg)"}}
-                        />
-                    </div>
-                    </div>
 
                     </div>
                 </div>
