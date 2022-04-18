@@ -1,0 +1,39 @@
+.forwrite{
+    flex: 9 ; 
+    
+    padding-bottom: 30px;
+    background-color: #fdfbfb;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+}   
+.Description{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 165px;
+    padding: 5px ; 
+   
+    font-family: 'Varela Round', sans-serif;
+    font-size: 20px;
+    color:darkolivegreen;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    
+}
+.buttonWrite{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 490px;
+    text-align: center;
+    color: white; 
+    background-color: teal;
+    padding: 10px;
+    border: none; 
+    border-radius: 10px;
+    cursor: pointer; 
+    font-size: 18px;
+}
+
