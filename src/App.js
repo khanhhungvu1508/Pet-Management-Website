@@ -1,5 +1,5 @@
-import "./components/style.css"
-import Controller from './Controller';
+import "./components/style.css";
+import Controller from "./Controller";
 
 function App() {
   return (
