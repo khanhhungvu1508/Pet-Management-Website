@@ -8,7 +8,7 @@ export default class ServicePage extends React.Component {
   }
   serciveName = ["Dog per visit", "Cat per visit", "Pet bath", "Pet groom"];
   classNameForService = [
-    "service-tab-link w-inline-block",
+    "service-tab-link w-inline-block w-tab-link w--current",
     "service-tab-link w-inline-block",
     "service-tab-link w-inline-block",
   ];
@@ -34,7 +34,11 @@ export default class ServicePage extends React.Component {
               alt="cat"
             /> */}
             <div className="row">
-              <div className="col col-8">
+              <div
+                className={
+                  this.props.widthofScreen > 991 ? "col col-8" : "col col-12"
+                }
+              >
                 <img
                   src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af380b7ac3b34a7a73c68_icon-1-services-veterinary-x-template.svg"
                   loading="eager"
@@ -70,6 +74,7 @@ export default class ServicePage extends React.Component {
                   </div>
                 </div>
                 <div className="divider service"></div>
+                {this.props.widthofScreen <= 991 && <ScheduleVisit />}
                 {/* <img
                   src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
                   alt=""
@@ -362,7 +367,7 @@ export default class ServicePage extends React.Component {
                 {this.props.children}
               </div>
               <div className="col col-4">
-                <ScheduleVisit />
+                {this.props.widthofScreen > 991 && <ScheduleVisit />}
               </div>
             </div>
           </div>

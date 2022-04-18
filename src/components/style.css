@@ -2220,6 +2220,12 @@ body {
   #footer-contact-wrapper-content-title {
     margin-bottom: 10px;
   }
+
+  /* service */
+  .split-content.service-sidebar {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2772,7 +2778,7 @@ body {
   transition: opacity 300ms ease 0s;
 }
 a:not([href]):not([tabindex]) {
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
 }
 .service-tab-link.w--current {
@@ -2876,7 +2882,8 @@ img {
 }
 
 .split-content.service-sidebar {
-  max-width: 385px;
+  /* max-width: 385px; */
+  position: relative;
 }
 
 .split-content.product-left {
@@ -2969,10 +2976,13 @@ img {
   background-color: #ffffff;
   border: 1px solid #cccccc;
 }
+.input:hover {
+  border-color: #f97561;
+}
 .select-wrapper {
   min-height: 65px;
   padding-right: 19px;
-  padding-left: 19px;
+  padding-left: 8px;
   border-style: solid;
   border-width: 1px;
   border-color: #d0cccc;
@@ -2994,9 +3004,9 @@ img {
   font-size: 16px;
   line-height: 1.375em;
 }
-.w-select {
+/* .w-select {
   background-color: #f3f3f3;
-}
+} */
 .button-primary.full-width {
   display: block;
   -webkit-align-self: stretch;
@@ -3038,4 +3048,7 @@ input.w-button {
   z-index: -1;
   top: -97px;
   left: -62px;
+}
+.service-tag-icon {
+  margin-right: 10px;
 }
