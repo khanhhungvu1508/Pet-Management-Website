@@ -27,11 +27,34 @@ export default class AboutPage extends React.Component {
                     </div>
                 </div>
             </section>
+            <div className="container " id="content-about-img">
+                
+                    <div className="about-hero1">
+                        <img src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611c3fa161b0eeb21b392afb_image-1-about-hero-veterinary-x-template.jpg" alt="" id="img-1" />
+                    </div>
+                    <div className="about-hero2">
+                        <img src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611c3fa2314079b2d7d7effd_image-2-about-hero-veterinary-x-template.jpg" alt="" id="img-2" />
+                    </div>
+                    <div className="motion-1">
+                        <img src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611c40c9352687080d77032c_shape-1-about-hero-veterinary-x-template.svg" alt="" id="img-3" />
+                    </div>
+                    <div className="motion-2">
+                        <img src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611c40c9d8fd85380ba9d7a8_shape-2-about-hero-veterinary-x-template.svg" alt="" id="img-4" />
+                    </div>
+                    <div className="motion-3">
+                        <img src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611c40c9f43e10a328cc5197_shape-3-about-hero-veterinary-x-template.svg" alt="" id="img-5" />
+                    </div>
+                    <div className="motion-4">
+                        <img src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611c40c9e8b1934eeeb78bd8_shape-4-about-hero-veterinary-x-template.svg" alt="" id="img-6" />
+
+                </div>
+                
+            </div>
 
             <section className="container my-5 py-4">
                 <div className="row">
                     <div className="col-md-6 ">
-                        <h2 className="display-5 fw-bold">The story behind our vet practice</h2>
+                        <h2 className="display-5 fw-bold" >The story behind our vet practice</h2>
                         <p className="lead mb-4 "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
                             ornare purus, mauris massa nisi, habitasse velit tristique. Sed
                             nec purus quis ac, dolor. Dignissim commodo ipsum nibh
@@ -44,16 +67,16 @@ export default class AboutPage extends React.Component {
                         </p>
                     </div>
                     {/* For Images */}
-                    <div className="col-md-6 mx-auto">
-                        <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611c45857d86d3dd1523f913_image-1-story-veterinary-x-template.jpg" alt="" height="400px" width="600px" />
+                    <div id="the-story" className="col-md-6 mx-auto ">
+                        <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611c45857d86d3dd1523f913_image-1-story-veterinary-x-template.jpg" alt="" height="400px" width="600px" id="the-story-pic" />
                     </div>
                 </div>
             </section>
 
             <section className="container my-5 py-4">
                 <div className="row">
-                    <div className="col-md-6 mx-auto">
-                        <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611c4586e8b1937943b7b0ee_image-2-story-veterinary-x-template.jpg" alt="" height="400px" width="550px" />
+                    <div id="our-core" className="col-md-6 mx-auto">
+                        <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611c4586e8b1937943b7b0ee_image-2-story-veterinary-x-template.jpg" alt="" height="400px" width="550px" id="our-core-pic"/>
                     </div>
 
 
@@ -187,7 +210,7 @@ export default class AboutPage extends React.Component {
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <h5 className="card-title fs-3 fw-bold">John Carter</h5>
+                                    <h5 className="card-title fs-3 fw-bold">Andy Smith</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consecteturol adipiscing elit. Donec nunc nulla.</p>
                                     <a href="https://www.facebook.com/" class="btn btn-primary">Button</a>
                                 </div>
@@ -202,7 +225,7 @@ export default class AboutPage extends React.Component {
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <h5 className="card-title fs-3 fw-bold">John Carter</h5>
+                                    <h5 className="card-title fs-3 fw-bold">Mike Warren</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consecteturol adipiscing elit. Donec nunc nulla.</p>
                                     <a href="https://www.facebook.com/" class="btn btn-primary">Button</a>
                                 </div>
@@ -212,76 +235,62 @@ export default class AboutPage extends React.Component {
                 </div>
             </section>
 
-            <section className="follow">
-                <div className="container my-3 py-2">
-                    <div className="row">
-                        <div className="col-12 text-center">
-                            <h2 className="display-5 fw-bold">
-                                Follow us on <a href="https://www.instagram.com/" >Instagram </a>
-                            </h2>
+                            <div id="list-follow-in-instagram">
+                    <div id="list-follow-in-instagram-wrapper">
+                        <div id="list-follow-in-instagram-title">
+                            Follow us on&#160;
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
                         </div>
+
+                        <div id="grid-list-follow-in-instagram-image">
+                            {
+                                listImageInInstagram.map((listImage, index) => 
+                                    <a 
+                                        href="https://www.instagram.com/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        id={listImage.id}
+                                        key={listImage.key}
+                                        onMouseEnter={() => this.onMouseEnterListFollowInstagram(index)}
+                                        onMouseLeave={() => this.onMouseLeaveListFollowInstagram(index)}
+                                        style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1)
+                                                        + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1) 
+                                                        + ", 1) rotateZ(" + this.state.rotateZImageInListFollowInstagrams[index].toString() + "deg)"}}
+                                    >
+                                        <img
+                                            src={listImage.src}
+                                            alt=""
+                                            style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1)
+                                                    + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1) 
+                                                    + ", 1)"}}
+                                        />
+                                    </a>
+                                )
+                            }
+                        </div>
+
+                        <img
+                            src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611b02494ed1f62ec189c397_shape-1-instagram-veterinary-x-template.svg"
+                            alt=""
+                            id="list-follow-in-instagram-image-bg1"
+                            style={{transform: "rotateZ(" + this.props.rotateZImage.toString() + "deg)"}}
+                        />
+
+                        <img
+                            src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611b024a482dee6b2e1e340e_shape-2-instagram-veterinary-x-template.svg"
+                            alt=""
+                            id="list-follow-in-instagram-image-bg2"
+                            style={{transform: "rotateZ(" + this.props.rotateZImage.toString() + "deg)"}}
+                        />
+
+                        <img
+                            src="https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611b01a7c02126789ccbb2b6_shape-2-testimonials-veterinary-x-template.svg"
+                            alt=""
+                            id="list-follow-in-instagram-image-bg3"
+                            style={{transform: "rotateZ(" + this.props.rotateZImage.toString() + "deg)"}}
+                        />
                     </div>
                 </div>
-                <div className="container my-5 py-5">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <a href="https://www.instagram.com/">
-                                    <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611adcd84e89583c1bf70798_image-1-instagram-veterinary-x-template.jpg" class="card-img-top mx-auto p-4" alt="..." />
-                                    <div class="mask" ></div>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <a href="https://www.instagram.com/">
-                                    <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611adcd8e87f2d548f185c60_image-2-instagram-veterinary-x-template.jpg" class="card-img-top mx-auto p-4" alt="..." />
-                                    <div class="mask" ></div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className="col-md-4">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                        <a href="https://www.instagram.com">
-                                            <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611adcdaab6a6d295da10b78_image-3-instagram-veterinary-x-template.jpg" class="card-img-top mx-auto p-4" alt="..." />
-                                            <div class="mask" ></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                        <a href="https://www.instagram.com">
-                                            <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611adcd87d6b391f4fbc075b_image-4-instagram-veterinary-x-template.jpg" class="card-img-top mx-auto p-4" alt="..." />
-                                            <div class="mask" ></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                        <a href="https://www.instagram.com">
-                                            <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611adcd81e724c8b91245a60_image-6-instagram-veterinary-x-template.jpg" class="card-img-top mx-auto p-4" alt="..." />
-                                            <div class="mask" ></div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                        <a href="https://www.instagram.com">
-                                            <img src="https://uploads-ssl.webflow.com/611a94f7245a41cb2c0ce4d2/611adcdaea05ab4431b8db8f_image-5-instagram-veterinary-x-template.jpg" class="card-img-top mx-auto p-4" alt="..." />
-                                            <div class="mask" ></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </section>
             </div>
         );
     }
