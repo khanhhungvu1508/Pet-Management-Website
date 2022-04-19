@@ -3052,3 +3052,105 @@ input.w-button {
 .service-tag-icon {
   margin-right: 10px;
 }
+div.container {
+	text-align: center;
+}
+
+
+.about-hero1,.about-hero2,.motion-1,.motion-2,.motion-3,.motion-4 {
+	position : absolute;
+	width: 30%;
+	border-radius: 30px;
+	padding: 12px;
+	
+}
+#content-about-img img{
+	width: 100%;
+	border-radius: 30px;
+	
+}
+#content-about-img{
+	position: relative;
+	height: 750px;
+}
+
+
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+  }
+.motion-1{
+	top: -50px ;
+	left : 0px ;
+	z-index: 2;
+	width: 20%;
+	transform: translateX(-100px);
+
+}
+.motion-2{
+	right: 0px;
+	bottom: 20px;
+	z-index: 2;
+	width:18%;
+	transform: translateY(50px);
+	transform: translateX(100px);
+
+}
+.motion-3{
+	right: 0px;
+	bottom: -50px;
+	z-index: -1;
+	transform: translateX(-200px);
+	transform: translateY(50px);
+}
+
+.motion-4{
+	top: -110px;
+	left: 350px;
+	width : 50%;
+
+}
+
+.about-hero1{
+	top : 20px;
+	left :-20px;
+	z-index: 1 ;
+	width : 60% ;
+	transform: rotate(-4deg);
+}
+.about-hero2{
+	top: 150px;
+	left: 500px;
+	width: 60%;
+	z-index : 1;
+	transform: rotate(5deg);
+	background-color: white;
+}
+
+#img-3,#img-4,#img-5,#img-6{
+	animation: rotation 60s infinite linear;
+}
+
+#the-story{
+	border-radius: 30px;
+}
+#the-story-pic{
+	transform: rotatez(3deg);
+	border-radius: 30px;
+	max-width: 562px;
+
+}
+
+#our-core{
+	border-radius: 30px;
+}
+#our-core-pic{
+	transform: rotatez(-3deg);
+	border-radius: 30px;
+	max-width: 562px;
+}
+
