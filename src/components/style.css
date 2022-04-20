@@ -1434,7 +1434,7 @@ body {
 
 #list-articles-news-info-title-text1 {
   justify-items: center;
-  margin-left: 415px;
+  margin-left: 510px;
   color: #2c2524;
   font-size: 38px;
   line-height: 1.395em;
@@ -1492,7 +1492,7 @@ body {
   min-height: 100%;
   padding-bottom: 80px;
   width: 780px;
-  margin-left: 100px;
+  margin-left: 180px;
   align-items: center;
   padding-left: 50px;
   
@@ -1544,12 +1544,17 @@ body {
   color: #fff;
   font-weight: 600;
 }
-
+#grid-articles-news-info-cell-title1 {
+  margin-top: 0px;
+  margin-bottom: 27px;
+  font-weight: 800;
+  font-size: 26px;
+}
 #grid-articles-news-info-cell-title {
   margin-top: 0px;
   margin-bottom: 20px;
   font-weight: 800;
-  font-size: 22px;
+  font-size: 20px;
 }
 #grid-articles-news-info-cell-detail {
   display: flex;
@@ -2740,10 +2745,6 @@ body {
     padding-right: 15px;
     padding-left: 15px;
     font-size: 13px;
-  }
-
-  #grid-articles-news-info-cell-title {
-    font-size: 20px;
   }
 
   #grid-articles-news-info-cell-detail {
