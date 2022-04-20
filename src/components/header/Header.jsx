@@ -1,6 +1,6 @@
 import "./header.css"
 
-export default function Header() {
+export default function Header1() {
   return (
     <div className='header'>
         <div className="headerTitles"> 
