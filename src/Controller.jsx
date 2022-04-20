@@ -8,6 +8,7 @@ import ServicePage from './components/ServicePage';
 import BlogPage from './components/BlogPage';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import SinglePost from "./components/singlePost/SinglePost";
 
 export default class Controller extends React.Component {
     constructor(props) {
@@ -103,7 +104,95 @@ export default class Controller extends React.Component {
                 }
             ],
 
+            cellCustomerTestimonials: [
+                {
+                    key: "1",
+                    img: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adaac537a1a088387200e_image-2-testimonials-veterinary-x-template-p-800.jpeg",
+                    title: "A team of vets you can trust",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit in consectetur lacus vitae, quis et odio egestas. Diam elit, feugiat adipiscing nibh pretium. Enim eget ut quam.",
+                    name: "Kathie Corl",
+                    owner: "Molly's Owner"
+                },
+                {
+                    key: "2",
+                    img: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adaac1e724c3ef1243bb5_image-1-testimonials-veterinary-x-template.jpg",
+                    title: "A team of vets you can trust",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit in consectetur lacus vitae, quis et odio egestas. Diam elit, feugiat adipiscing nibh pretium. Enim eget ut quam.",
+                    name: "Sophie Moore",
+                    owner: "Tommy's Owner"
+                }
+            ],
+
             // Articles and news
+            cellArticlesNews1: [
+                {
+                    key: "1",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afadf790dc2a997dde426_image-6-blog-veterinary-x-template-p-1600.jpeg",
+                    title: "Dog toys: How to pick the best and the safest",
+                    tag: "Dogs",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+                {
+                    key: "2",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afac5d4780959fd62559c_image-5-blog-veterinary-x-template-p-1600.jpeg",
+                    title: "How to adopt a dog: Everything you need to know",
+                    tag: "Dogs",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+            ],
+
+            cellArticlesNews2: [
+                {
+                    key: "1",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afadf790dc2a997dde426_image-6-blog-veterinary-x-template-p-1600.jpeg",
+                    title: "Dog toys: How to pick the best and the safest",
+                    tag: "Dogs",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+                {
+                    key: "2",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afac5d4780959fd62559c_image-5-blog-veterinary-x-template-p-1600.jpeg",
+                    title: "How to adopt a dog: Everything you need to know",
+                    tag: "Dogs",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+                {
+                    key: "3",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afaad4c1e33360a83b748_image-4-blog-veterinary-x-template-p-1600.jpeg",
+                    title: "The best cat food, according to experts and veterinarians",
+                    tag: "Cats",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+                {
+                    key: "4",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afa57d69b3631526d2172_image-2-blog-veterinary-x-template.jpg",
+                    title: "Why it is worth having your dog groomed professionally",
+                    tag: "Cats",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+                {
+                    key: "5",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611afa8f4ed1f62ac1898a80_image-3-blog-veterinary-x-template.jpg",
+                    title: "5 essential commands you can teach to your dog",
+                    tag: "Cats",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+                {
+                    key: "6",
+                    img: "https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af97ed136dcf23f0257d5_image-1-blog-veterinary-x-template.jpg",
+                    title: "My cat sleeps constantly, when should I worry about it?",
+                    tag: "Cats",
+                    day: "August 16, 2021",
+                    content: ""
+                },
+            ],
             cellArticlesNews: [
                 {
                     key: "1",
@@ -129,6 +218,8 @@ export default class Controller extends React.Component {
                     day: "August 16, 2021",
                     content: ""
                 },
+                
+                
             ],
             // Service page
             typeServices: "",
@@ -292,7 +383,11 @@ export default class Controller extends React.Component {
                 { /* Blog page */
                     this.state.page === "BlogPage" &&
                     <BlogPage 
+                        selectPage={this.selectPage} 
                         typeBlogs = {this.state.typeBlogs}
+                        cellArticlesNews1 = {this.state.cellArticlesNews1}
+                        cellArticlesNews2 = {this.state.cellArticlesNews2}
+                        cellArticlesNews = {this.state.cellArticlesNews}
                         rotateZImage = {this.state.rotateZImage}
                         widthofScreen = {this.state.widthofScreen}
                     />
@@ -301,6 +396,7 @@ export default class Controller extends React.Component {
                 { /* About page */
                     this.state.page === "AboutPage" &&
                     <AboutPage 
+                    
                         rotateZImage = {this.state.rotateZImage}
                         widthofScreen = {this.state.widthofScreen}
                     />
@@ -313,6 +409,15 @@ export default class Controller extends React.Component {
                         widthofScreen = {this.state.widthofScreen}
                     />
                 }
+
+                {   /* SinglePost page */
+                    this.state.page === "SinglePost" &&
+                    <SinglePost
+                        rotateZImage = {this.state.rotateZImage}
+                        widthofScreen = {this.state.widthofScreen}
+                    />
+                }
+               
 
                 <Footer 
                     selectPage={this.selectPage}
