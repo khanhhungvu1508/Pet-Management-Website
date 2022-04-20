@@ -1391,23 +1391,57 @@ body {
   width: 15.97222328186035%;
 }
 
+#blog_content1{
+  display: flex;
+  
+}
 #list-articles-news-info {
   width: 100%;
   background: #fbfbfb;
-  padding-top: 160px;
+  padding-top: 130px;
   padding-bottom: 160px;
 }
+#list-articles-news-info1{
+  flex: 9 ; 
+  display: flex;
+  padding-top: 50px;
 
+  flex-wrap: wrap; 
+  
+  
+}
 #list-articles-news-info-wrapper {
   padding-left: 24px;
   padding-right: 24px;
   max-width: 1257px;
   position: relative;
+  justify-items: center;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  
+ 
 }
+
+#list-articles-news-info-title1 {
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  margin-bottom: 54px;
+}
+
+#list-articles-news-info-title-text1 {
+  justify-items: center;
+  margin-left: 415px;
+  color: #2c2524;
+  font-size: 38px;
+  line-height: 1.395em;
+  font-weight: 800;
+  justify-content: center;
+}
+
 
 #list-articles-news-info-title {
   display: flex;
@@ -1423,6 +1457,7 @@ body {
   font-size: 38px;
   line-height: 1.395em;
   font-weight: 800;
+  justify-content: center;
 }
 
 #list-articles-news-info-title-btn {
@@ -1434,8 +1469,7 @@ body {
   text-align: center;
   font-weight: 800;
   transform: translate3d(0px, 0px, 0.01px);
-  transition: transform 300ms ease, background-color 300ms ease,
-    -webkit-transform 300ms ease;
+  transition: transform 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
   transform-style: preserve-3d;
 }
 
@@ -1445,14 +1479,35 @@ body {
   transform: translate3d(0px, -4px, 0.01px);
 }
 
+
 #grid-articles-news-info > .row {
   grid-row-gap: 48px;
 }
+
+
+#grid-articles-news-info-cell1 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100%;
+  padding-bottom: 80px;
+  width: 780px;
+  margin-left: 100px;
+  align-items: center;
+  padding-left: 50px;
+  
+ 
+}
+#grid-articles-news-info-cell1:hover {
+ cursor: pointer;
+}
+
 
 #grid-articles-news-info-cell {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  padding-bottom: 80px;
 }
 
 #grid-articles-news-info-cell:hover {
@@ -1469,6 +1524,7 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  
 }
 
 #grid-articles-news-info-cell-image {
@@ -1495,7 +1551,6 @@ body {
   font-weight: 800;
   font-size: 22px;
 }
-
 #grid-articles-news-info-cell-detail {
   display: flex;
   justify-content: space-between;
