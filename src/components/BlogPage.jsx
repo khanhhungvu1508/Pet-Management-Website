@@ -193,7 +193,7 @@ export default class BlogPage extends React.Component {
 
                                                             <div id="grid-articles-news-info-cell-content">
                                                                 <div
-                                                                    id="grid-articles-news-info-cell-title"
+                                                                    id="grid-articles-news-info-cell-title1"
                                                                     style={{
                                                                         color: "rgb(" + String(4100 * this.state.ratioImageInListArticlesNews1[index] - 4056)
                                                                             + ", " + String(1600 * this.state.ratioImageInListArticlesNews1[index] - 1563) + ", "
