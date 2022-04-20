@@ -12,6 +12,38 @@ export default class AboutPage extends React.Component {
     }
 
     render() {
+        const listImageInInstagram = [
+            {
+                key: "0",
+                id: "list-follow-in-instagram-image-size1",
+                src: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adcd84e89583c1bf70798_image-1-instagram-veterinary-x-template.jpg"
+            },
+            {
+                key: "1",
+                id: "list-follow-in-instagram-image-size1",
+                src: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adcd8e87f2d548f185c60_image-2-instagram-veterinary-x-template.jpg"
+            },
+            {
+                key: "2",
+                id: "list-follow-in-instagram-image-size2",
+                src: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adcdaab6a6d295da10b78_image-3-instagram-veterinary-x-template.jpg"
+            },
+            {
+                key: "3",
+                id: "list-follow-in-instagram-image-size2",
+                src: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adcd87d6b391f4fbc075b_image-4-instagram-veterinary-x-template.jpg"
+            },
+            {
+                key: "4",
+                id: "list-follow-in-instagram-image-size2",
+                src: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adcd81e724c8b91245a60_image-6-instagram-veterinary-x-template.jpg"
+            },
+            {
+                key: "5",
+                id: "list-follow-in-instagram-image-size2",
+                src: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adcdaea05ab4431b8db8f_image-5-instagram-veterinary-x-template.jpg"
+            }
+        ];
         return (
             <div id="aboutpage">
                  <section className="container my-5 py-4 ">
