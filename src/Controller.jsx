@@ -104,24 +104,7 @@ export default class Controller extends React.Component {
                 }
             ],
 
-            cellCustomerTestimonials: [
-                {
-                    key: "1",
-                    img: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adaac537a1a088387200e_image-2-testimonials-veterinary-x-template-p-800.jpeg",
-                    title: "A team of vets you can trust",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit in consectetur lacus vitae, quis et odio egestas. Diam elit, feugiat adipiscing nibh pretium. Enim eget ut quam.",
-                    name: "Kathie Corl",
-                    owner: "Molly's Owner"
-                },
-                {
-                    key: "2",
-                    img: "https://assets.website-files.com/611a94f7245a41cb2c0ce4d2/611adaac1e724c3ef1243bb5_image-1-testimonials-veterinary-x-template.jpg",
-                    title: "A team of vets you can trust",
-                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit in consectetur lacus vitae, quis et odio egestas. Diam elit, feugiat adipiscing nibh pretium. Enim eget ut quam.",
-                    name: "Sophie Moore",
-                    owner: "Tommy's Owner"
-                }
-            ],
+            
 
             // Articles and news
             cellArticlesNews1: [
