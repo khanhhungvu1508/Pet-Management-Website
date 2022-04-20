@@ -84,6 +84,7 @@
 #Stinfo__product {
   background-color: #fffaf6;
   padding-top: 140px;
+  padding-bottom: 20px;
 }
 
 .Stinfo__img {
@@ -110,17 +111,17 @@
   font-size: 24px;
 }
 .button-btn {
-  background: linear-gradient(to left, #a264bb, #519cce);
+  background: #f5543b;
   width: 30%;
   height: 40px;
   margin: 12px 12px 0;
   text-align: center;
-  border-radius: 30px;
+  border-radius: 14px;
   cursor: pointer;
 }
 .button-btn:hover {
   transform: translate3d(0px, -4px, 0.03px);
-  background: linear-gradient(120deg, #a41cda, #0e94ec);
+  background-color: yellow;
 }
 #item--1,
 #item--2,
@@ -129,9 +130,4 @@
 #item--5,
 #item--6 {
   display: none;
-}
-@media (max-width: 500px) {
-  #Stinfo__product {
-    padding-bottom: 20px;
-  }
 }
