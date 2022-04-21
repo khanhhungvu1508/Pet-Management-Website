@@ -219,47 +219,47 @@ export default class AboutPage extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 mb-5 pb-5">
-                            <div class="card text-center " >
-                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <div className="card text-center " >
+                                <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                                     <a href="https://www.facebook.com/">
-                                        <img src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af6eaf8ec6c8fa91d75b0_image-1-team-veterinary-x-template.jpg" class="card-img-top mx-auto p-2" alt="..." />
-                                        <div class="mask" ></div>
+                                        <img src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af6eaf8ec6c8fa91d75b0_image-1-team-veterinary-x-template.jpg" className="card-img-top mx-auto p-2" alt="..." />
+                                        <div className="mask" ></div>
                                     </a>
                                 </div>
-                                <div class="card-body">
+                                <div className="card-body">
                                     <h5 className="card-title fs-3 fw-bold">John Carter</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consecteturol adipiscing elit. Donec nunc nulla.</p>
-                                    <a href="https://www.facebook.com/" class="btn btn-primary">Button</a>
+                                    <a href="https://www.facebook.com/" className="btn btn-primary">Button</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4 mb-5 pb-5">
-                            <div class="card text-center " >
-                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <div className="card text-center " >
+                                <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                                     <a href="https://www.facebook.com/">
-                                        <img src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af6cdfe37cc507ba55d35_image-2-team-veterinary-x-template.jpg" class="card-img-top mx-auto p-2" alt="..." />
-                                        <div class="mask" ></div>
+                                        <img src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af6cdfe37cc507ba55d35_image-2-team-veterinary-x-template.jpg" className="card-img-top mx-auto p-2" alt="..." />
+                                        <div className="mask" ></div>
                                     </a>
                                 </div>
-                                <div class="card-body">
+                                <div className="card-body">
                                     <h5 className="card-title fs-3 fw-bold">Andy Smith</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consecteturol adipiscing elit. Donec nunc nulla.</p>
-                                    <a href="https://www.facebook.com/" class="btn btn-primary">Button</a>
+                                    <a href="https://www.facebook.com/" className="btn btn-primary">Button</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-4 mb-5 pb-5">
-                            <div class="card text-center " >
-                                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <div className="card text-center " >
+                                <div className="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                                     <a href="https://www.facebook.com/">
-                                        <img src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af5669643927b4a791bec_image-3-team-veterinary-x-template.jpg" class="card-img-top mx-auto p-2" alt="..." />
-                                        <div class="mask" ></div>
+                                        <img src="https://assets.website-files.com/611a94f7245a41e60e0ce4e3/611af5669643927b4a791bec_image-3-team-veterinary-x-template.jpg" className="card-img-top mx-auto p-2" alt="..." />
+                                        <div className="mask" ></div>
                                     </a>
                                 </div>
-                                <div class="card-body">
+                                <div className="card-body">
                                     <h5 className="card-title fs-3 fw-bold">Mike Warren</h5>
                                     <p className="card-text">Lorem ipsum dolor sit amet, consecteturol adipiscing elit. Donec nunc nulla.</p>
-                                    <a href="https://www.facebook.com/" class="btn btn-primary">Button</a>
+                                    <a href="https://www.facebook.com/" className="btn btn-primary">Button</a>
                                 </div>
                             </div>
                         </div>
@@ -285,16 +285,16 @@ export default class AboutPage extends React.Component {
                                         key={listImage.key}
                                         onMouseEnter={() => this.onMouseEnterListFollowInstagram(index)}
                                         onMouseLeave={() => this.onMouseLeaveListFollowInstagram(index)}
-                                        style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1)
-                                                        + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1) 
-                                                        + ", 1) rotateZ(" + this.state.rotateZImageInListFollowInstagrams[index].toString() + "deg)"}}
+                                        // style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1)
+                                                        // + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 150 + 1) 
+                                                        // + ", 1) rotateZ(" + this.state.rotateZImageInListFollowInstagrams[index].toString() + "deg)"}}
                                     >
                                         <img
                                             src={listImage.src}
                                             alt=""
-                                            style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1)
-                                                    + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1) 
-                                                    + ", 1)"}}
+                                            // style={{transform: "scale3d(" + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1)
+                                                    // + ", " + String(this.state.rotateZImageInListFollowInstagrams[index] / 100 + 1) 
+                                                    // + ", 1)"}}
                                         />
                                     </a>
                                 )
