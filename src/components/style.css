@@ -16,6 +16,7 @@ body {
   padding-top: 28px;
   padding-bottom: 28px;
   z-index: 9999;
+  top:0px;
 }
 
 #header-wrapper {
@@ -3625,4 +3626,9 @@ div.container {
   margin-top: -320px;
   right: 3%;
   animation: spinAround 36s infinite linear;
+}
+
+#aboutpage{
+  padding-top: 100px;
+  background-color: #fefaf6;
 }
