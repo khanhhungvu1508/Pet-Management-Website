@@ -3224,6 +3224,7 @@ div.container {
 .Slider__text {
   font-size: 24px;
   font-weight: 500;
+  text-align: center;
 }
 
 .List__product {
@@ -3238,20 +3239,20 @@ div.container {
   object-fit: cover;
 }
 .product__item {
-  flex-basis: 30%;
+  flex-basis: 28%;
   text-align: center;
 }
 .product__name {
   padding-top: 20px;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
 }
 .product__name:hover {
   color: yellow;
 }
 .product__img {
-  width: 360px;
-  height: 360px;
+  width: 320px;
+  height: 320px;
   border-radius: 24px;
 }
 .product__price {
@@ -3308,6 +3309,7 @@ div.container {
   font-weight: 800;
   margin-left: 12px;
   margin-right: 8px;
+  border: 1px solid #fff;
 }
 
 .list--item > input {
@@ -3349,6 +3351,10 @@ div.container {
 }
 .list--item {
   flex-basis: 100%;
+}
+
+.slide {
+  display: none;
 }
 .list--product {
   display: none;
@@ -3672,4 +3678,82 @@ div.container {
 .card-body > h5 {
   font-size: 30px;
   font-weight: 600;
+}
+/* Shoppage */
+.info__img {
+  width: 60%;
+  border-radius: 24px;
+}
+.info__img:hover {
+  transform: scale(1.03);
+  transform-style: preserve-3d;
+  object-fit: cover;
+}
+#Stinfo__product ul li select {
+  font-size: 18px;
+  width: 160px;
+  text-align: center;
+}
+#Stinfo__product ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#Stinfo__product li h2 {
+  font-weight: 600;
+}
+#Stinfo__product li span {
+  font-size: 24px;
+  font-weight: 500;
+}
+@media (min-width: 1200px) {
+  #Stinfo__product li {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  #Stinfo__product li {
+    margin-top: 16px;
+  }
+  .info__img {
+    width: 64%;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  #Stinfo__product li {
+    margin-top: 10px;
+  }
+  .info__img {
+    width: 42%;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 768px) and (min-width: 440px) {
+  .info__img {
+    width: 50%;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 440px) {
+  #Stinfo__product li {
+    margin-top: 6px;
+  }
+  .info__img {
+    width: 60%;
+    border-radius: 24px;
+  }
+  ul .button--double {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  li select {
+    font-size: 18px;
+    width: 160px;
+  }
+  .button--double .button-btn {
+    width: 200px;
+  }
 }
